@@ -105,8 +105,12 @@
   margin: 12px auto auto 19.25%;
 }
 
-.header-get-invited {
+.form-get-invited {
   width: 100%;
+
+  &__with-bluish-purple-btn {
+
+  }
 
   &_enter-your-email {
     max-width: 350.9px;
@@ -134,24 +138,29 @@
     font-weight: 900;
     line-height: 1.2;
     color: #ffffff;
-    padding: 18.7px 32px;
+    padding: 19px 32px;
     border-radius: 200px;
     background-color: #2d0f41;
     border: none;
+
+    &__with-bluish-purple-btn {
+      background-color: #8b23d1;
+    }
+
   }
 }
 
-.block-advantages {
+.block-features {
   width: 100%;
   margin-top: -51px;
 }
 
-.block-advantages-wrap {
+.block-features-wrap {
   //width: 65.4%;
   margin: auto 11.67% auto 18.75%;
 }
 
-.block-advantages-item {
+.block-features-point {
   width: ~"calc(32.5% - 47px)";
   display: inline-block;
   vertical-align: top;
@@ -177,6 +186,182 @@
     color: #565656;
     margin-top: 12px;
   }
+}
+
+.block-try-for-free {
+  background-color: #2d0f41;
+  background-image: url("../images/phone-with-logo-copy-2.svg");
+  background-position: 50% 467.3px;
+  background-repeat: no-repeat;
+  padding: 73px 0 104px;
+
+  &_header-easy-to-use {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 70px;
+    font-weight: 900;
+    line-height: 0.8;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  &_header-try-for-free {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 0.62;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 2px 21px rgba(0, 0, 0, 0.76);
+    margin-bottom: 218px;
+  }
+}
+
+.wrap-block-how-to-use {
+  //width: 44%;
+  width: 528px;
+  margin: 70px auto 239px;
+
+}
+
+.block-how-to-use-point {
+  width: ~"calc(32.5% - 26px)";
+  display: inline-block;
+  vertical-align: top;
+  margin: auto 13px;
+
+  &_img {
+    display: block;
+    margin: auto auto 30px;
+  }
+
+  &_img-caption {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    line-height: 1.31;
+    color: #ffffff;
+  }
+}
+
+.wrap-block-about-us {
+  background-color: #fcfcfc;
+}
+
+.block-about-us {
+  width: 80.5%;
+  margin: auto;
+  padding: 68px 0 66px;
+
+  &_header {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 0.93;
+    color: #717171;
+    margin-bottom: 27px;
+  }
+
+  &_info-about-company {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.45;
+    color: #565656;
+    max-width: 452px;
+  }
+}
+
+.block-hello-kitab-sawti-com {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: left;
+  color: #717171;
+  margin: 46px auto 26px;
+
+  &_email {
+
+  }
+
+  &_privacy-policy {
+    //font-family: GeezaPro;
+    font-weight: normal;
+  }
+}
+
+.block-social-icons {
+
+  &_icon {
+    margin-right: 15px;
+    text-decoration: none;
+  }
+}
+
+.block-footer {
+  margin: 33px 117px 25px;
+
+  &_logo {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  &_copy-right {
+    font-family: 'Roboto', sans-serif;;
+    font-size: 11px;
+    line-height: 1.36;
+    text-align: left;
+    color: #979797;
+    display: block;
+    margin-bottom: 25px;
+  }
+}
+
+.slider {
+  width: 100%;
+  padding: 71px 0 83px;
+  background-color: #f8f7f7;
+}
+
+.slider-single-item {
+  width: 168.8px;
+  height: 300.2px;
+  border-radius: 3.2px;
+  background-color: #ffffff;
+  border: solid 0.8px #e5e5e5;
+  display: inline-block;
+  margin: auto 5.5px;
+  position: relative;
+
+
+  &:hover {
+    background-color: #ece6ed;
+    border: solid 0.8px #cdcdcd;
+  }
+
+  &::after {
+    content: url('../images/play-icon-large.svg');
+    display: block;
+    z-index: 1000;
+    top:  95px;
+    left: 25%;
+    margin: auto;
+    position: absolute;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &_book-img {
+    margin: 42px auto auto;
+    width: 107.1px;
+    height: 155.8px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
+.slick-prev::before, .slick-next::before  {
+  color: #000000;
 }
 
 
