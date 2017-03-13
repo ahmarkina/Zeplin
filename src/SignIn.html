@@ -1,0 +1,22 @@
+//= templates/header.html
+
+<div class="login-page">
+    <h2 class="header header--login-page">Sign into Kitab Sawti</h2>
+    <span class="hint hint--login-page">Enter your details below</span>
+    <span class="error error--authentication-login-page">Oops! That email / password combination is not valid</span>
+    <form method="POST" class="form form--crowd-login">
+        <div class="wrap-field wrap-field--username">
+            <label for="username" class="label label--username">Email</label>
+            <input id="username" class="input input--username-login-page" type="text " name="username" placeholder="filip@hammarnas.se">
+        </div>
+        <div class="wrap-field wrap-field--password">
+            <label for="password" class="label label--password">Password</label>
+            <input type="text" id="password" class="input input--password-login-page" type="password" name="password" placeholder="••••••••••••••">
+        </div>
+        <button id="login" class="btn btn--login-primary" type="submit">Sign in</button>
+        <a href="#" id="create" class="link link--create-account">Create an account</a>
+    </form>
+</div>
+</div>
+</body>
+</html>

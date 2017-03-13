@@ -13,6 +13,10 @@
 .Wrapper {
   margin: auto;
   max-width: 1200px;
+
+  &__privacy-policy-page {
+    max-width: 1024px;
+  }
 }
 
 .wrap-header {
@@ -21,7 +25,14 @@
   background-repeat: no-repeat;
   background-position: 40.16% 100%;
   width: 100%;
-  height: 770px;
+  padding-bottom: 204px;
+
+  &__privacy-policy-page {
+    max-width: 1024px;
+    background-color: #250a37;
+    background-image: none;
+    padding-bottom: 0;
+  }
 }
 
 .header-top-wrap-logo {
@@ -29,6 +40,10 @@
   background-color: #250a37;
   padding: 20px 35px 19px;
   float: left;
+
+  &__privacy-policy-page {
+    padding: 22px 35px 22px;
+  }
 }
 
 .header-top-menu {
@@ -44,11 +59,22 @@
 
   &_authentication {
     width: 164px;
+    opacity: 0.41;
+    border-right: solid 1px #ffffff;
+  }
+
+  &_authentication-major-page {
+    border: none;
   }
 
   &_change-language {
     width: 109px;
     background-color: #ffffff;
+
+    &__privacy-policy-page {
+      background-color: inherit;
+
+    }
   }
 
   &_local {
@@ -57,9 +83,13 @@
     font-weight: bold;
     line-height: 1;
     color: #1d1d1d;
-    padding: 28.25px 29px;
+    padding: 31px 29px;
     display: block;
     text-decoration: none;
+
+    &__privacy-policy-page {
+      color: #ffffff;
+    }
 
     &:hover {
       background-color: #250a37;
@@ -145,6 +175,11 @@
 
     &__with-bluish-purple-btn {
       background-color: #8b23d1;
+    }
+
+    &:hover {
+      border-radius: 200px;
+      background-color: #6e1fa3;
     }
 
   }
@@ -306,7 +341,7 @@
   }
 
   &_copy-right {
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
     font-size: 11px;
     line-height: 1.36;
     text-align: left;
@@ -362,6 +397,274 @@
 
 .slick-prev::before, .slick-next::before  {
   color: #000000;
+}
+
+.privacy-policy-block {
+  background-color: #1fc67b;
+  padding: 68px 0 59px;
+
+  &_header {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 1.13;
+    color: #ffffff;
+    text-align: center;
+  }
+}
+
+.privacy-policy-menu-wrap {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 28%;
+  padding: 0;
+  margin: 0;
+}
+
+.privacy-policy-menu {
+  margin: 82px auto auto 70px;
+
+}
+
+.privacy-policy-menu-point {
+  margin-bottom: 40px;
+  height: 36px;
+
+  &:hover {
+    background-color: #979797;
+  }
+
+  &_link {
+    text-decoration: none;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    color: #717171;
+  }
+}
+
+.privacy-policy-content {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 71%;
+  padding : 80px 0 0 55px;
+
+  &_title {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 0.86;
+    color: #565656;
+    margin-bottom: 10px;
+  }
+
+  &_paragraph {
+    max-width: 86%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.44;
+    color: #676767;
+    margin-bottom: 60px;
+  }
+}
+
+.privacy-policy-content-list {
+
+  &_paragraph {
+    max-width: 68%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.44;
+    color: #676767;
+    margin-bottom: 30px;
+  }
+}
+
+.privacy-policy-contact-info {
+  margin-left: 119px;
+
+  &_contact-us {
+
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 0.93;
+    color: #717171;
+  }
+
+  &_company-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.45;
+    color: #565656;
+    display: block;
+  }
+
+  &_address {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.45;
+    color: #565656;
+    display: block;
+  }
+
+  &_email {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.39;
+    color: #717171;
+    display: block;
+  }
+}
+
+.login-page {
+  max-width: 1024px;
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  color: #565656;
+  margin-top: 22px;
+
+  &--edit-account-page {
+    text-align: left;
+  }
+}
+
+.hint {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1;
+  color: #676767;
+  margin-top: 9px;
+  display: inline-block;
+  text-align: center;
+}
+
+.error {
+  font-family: 'Roboto', sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 1;
+  color: #ff0000;
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+}
+
+.form {
+  margin: auto;
+  max-width: 450px;
+}
+
+.wrap-field {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #565656;
+  margin-top: 33px;
+}
+
+.label {
+  display: block;
+  text-align: left;
+}
+
+.input {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1;
+  text-align: left;
+  color: #151515;
+  padding: 20px 26px;
+  background-color: #e8f7f0;
+  border: solid 1px #b8e5d2;
+  margin-top: 9px;
+
+  &--password-login-page {
+    font-size: 30px;
+    padding: 14px 26px;
+  }
+
+  &--password-create-account-page {
+    font-size: 30px;
+    padding: 14px 26px;
+  }
+}
+
+.btn {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  margin: 32px auto auto;
+  display: block;
+  padding: 14px 56px;
+  border-radius: 100px;
+  border: none;
+  background-color: #a132ad;
+
+  &--create-account {
+    padding: 15px 41px;
+    margin: 45px auto 174px;
+  }
+
+  &--edit-account {
+    margin: 37px auto 113px;
+    padding: 15px 48px;
+  }
+}
+
+.link {
+  font-family: 'Roboto', sans-serif;
+
+
+  &--create-account {
+    font-size: 18px;
+    font-weight: 300;
+    color: #a132ad;
+    margin: 26px auto 130px;
+    display: block;
+    text-decoration: none;
+  }
+
+  &--redirect-to-request-invite {
+    font-size: 15px;
+    color: #23be68;
+    display: inline-block;
+  }
+}
+
+.update-profile {
+  max-width: 1024px;
+  background-color: #eeeeee;
+  padding: 107px 0 94px;
+  text-align: center;
+  background-image: url("../images/profile-picture-placeholder-copy.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 63px;
+
+  &_icon {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+  }
+}
+
+.change-password-page {
+  max-width: 1024px;
+  margin: auto;
+  text-align: center;
 }
 
 
