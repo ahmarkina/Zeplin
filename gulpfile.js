@@ -11,7 +11,7 @@ gulp.task('css', function () {
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(autoprefixer({
-            browsers: ['>1%']
+            browsers: ['>0.1%']
         }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./build/css'))

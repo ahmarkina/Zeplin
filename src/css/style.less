@@ -14,23 +14,19 @@
   margin: auto;
   max-width: 1200px;
 
-  &__privacy-policy-page {
+  &--style-2 {
     max-width: 1024px;
   }
 }
 
 .wrap-header {
-  background-image: url("../images/hand-copy-2.png");
-  background-color: #A9A9A9;
-  background-repeat: no-repeat;
-  background-position: 40.16% 100%;
+  background: #A9A9A9 url("../images/hand-copy-2.png") no-repeat 40.16% 100%;
   width: 100%;
   padding-bottom: 204px;
 
-  &__privacy-policy-page {
+  &--style-2 {
     max-width: 1024px;
-    background-color: #250a37;
-    background-image: none;
+    background: #250a37 none;
     padding-bottom: 0;
   }
 }
@@ -41,15 +37,18 @@
   padding: 20px 35px 19px;
   float: left;
 
-  &__privacy-policy-page {
-    padding: 22px 35px 22px;
+  &--style-2 {
+    padding: 23px 35px 23px;
+    display: inline-block;
+    vertical-align: middle;
   }
 }
 
 .header-top-menu {
   float: right;
-  //width: ~"calc(100% - 244px)";
   width: 277px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .header-top-menu-item {
@@ -58,7 +57,7 @@
   text-align: center;
 
   &_authentication {
-    width: 164px;
+    max-width: 164px;
     opacity: 0.41;
     border-right: solid 1px #ffffff;
   }
@@ -71,9 +70,8 @@
     width: 109px;
     background-color: #ffffff;
 
-    &__privacy-policy-page {
+    &--style-2 {
       background-color: inherit;
-
     }
   }
 
@@ -87,8 +85,9 @@
     display: block;
     text-decoration: none;
 
-    &__privacy-policy-page {
+    &--style-2 {
       color: #ffffff;
+      padding: 34px 29px;
     }
 
     &:hover {
@@ -109,6 +108,13 @@
     display: block;
     margin: 18px 27px 12px;
     padding: 17.2px 0;
+
+    &--style-2 {
+      margin: 18px 27px 19px;
+      color: #ffffff;
+      border: solid 1px #ffffff;
+      display: block;
+    }
   }
 }
 
@@ -528,77 +534,178 @@
   text-align: center;
 }
 
-.header {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 30px;
-  color: #565656;
-  margin-top: 22px;
-
-  &--edit-account-page {
-    text-align: left;
-  }
-}
-
-.hint {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  line-height: 1;
-  color: #676767;
-  margin-top: 9px;
-  display: inline-block;
-  text-align: center;
-}
-
-.error {
-  font-family: 'Roboto', sans-serif;
-  font-size: 19px;
-  font-weight: 300;
-  line-height: 1;
-  color: #ff0000;
-  text-align: center;
-  display: block;
-  margin-top: 30px;
-}
-
 .form {
   margin: auto;
   max-width: 450px;
+
+  @media screen and (max-width: 568px) {
+    max-width: 265px;
+  }
+
+  &_header {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: #565656;
+    margin-top: 22px;
+
+    @media screen and (max-width: 568px) {
+      font-size: 22px;
+    }
+
+    &--align-left {
+      text-align: left;
+
+      @media screen and (max-width: 568px) {
+        margin-bottom: 38px;
+
+      }
+    }
+  }
+
+  &_hint-box {
+    margin: 9px auto 64px;
+
+    @media screen and (max-width: 568px) {
+      max-width: 188px;
+      margin: 10px auto 54px;
+    }
+
+    &--small-margin {
+      margin: 9px auto 30px;
+
+      @media screen and (max-width: 568px) {
+        margin: 5px auto 18px;
+      }
+    }
+  }
+
+  &_hint {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 1;
+    color: #676767;
+    text-align: center;
+
+    @media screen and (max-width: 568px) {
+      font-size: 13px;
+    }
+  }
+
+  &_link {
+    font-family: 'Roboto', sans-serif;
+
+    @media screen and (max-width: 568px) {
+      font-size: 13px;
+    }
+
+    &--bluish-purple {
+      font-size: 18px;
+      font-weight: 300;
+      color: #a132ad;
+      margin: 26px auto 130px;
+      display: block;
+      text-decoration: none;
+
+      @media screen and (max-width: 568px) {
+        font-size: 15px;
+        margin: 17px auto 53px;
+      }
+    }
+
+    &--green {
+      font-size: 15px;
+      color: #23be68;
+      display: inline-block;
+
+      @media screen and (max-width: 568px) {
+        font-size: 13px;
+      }
+      
+      &:hover {
+        color: #16b06b;
+      }
+    }
+
+    &--greyish-brown-two {
+      float: right;
+      font-size: 14px;
+      font-weight: 300;
+      color: #565656;
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
+
+  &_error {
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1;
+    color: #ff0000;
+    text-align: center;
+    display: block;
+    margin-top: 30px;
+
+    @media screen and (max-width: 568px) {
+      max-width: 265px;
+      margin-top: 18px;
+      font-size: 15px;
+    }
+  }
 }
 
-.wrap-field {
+.field-box {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   color: #565656;
   margin-top: 33px;
-}
 
-.label {
-  display: block;
-  text-align: left;
-}
-
-.input {
-  width: 100%;
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1;
-  text-align: left;
-  color: #151515;
-  padding: 20px 26px;
-  background-color: #e8f7f0;
-  border: solid 1px #b8e5d2;
-  margin-top: 9px;
-
-  &--password-login-page {
-    font-size: 30px;
-    padding: 14px 26px;
+  @media screen and (max-width: 568px) {
+    margin-top: 23px;
   }
 
-  &--password-create-account-page {
-    font-size: 30px;
-    padding: 14px 26px;
+  &_label {
+    display: block;
+    text-align: left;
+
+    @media screen and (max-width: 568px) {
+      font-size: 14px;
+    }
+
+    &--align-left {
+      display: inline-block;
+      float: left;
+    }
+  }
+
+  &_edit-box {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1;
+    text-align: left;
+    color: #151515;
+    padding: 18px 26px;
+    background-color: #e8f7f0;
+    border: solid 1px #b8e5d2;
+    margin-top: 9px;
+
+    @media screen and (max-width: 568px) {
+      font-size: 17px;
+      padding: 19px 20px;
+    }
+
+    &--font-size-30 {
+      font-size: 30px;
+      padding: 11px 26px;
+
+      @media screen and (max-width: 568px) {
+        font-size: 24px;
+        padding: 14px 20px;
+      }
+    }
   }
 }
 
@@ -606,41 +713,58 @@
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   color: #ffffff;
-  margin: 32px auto auto;
   display: block;
-  padding: 14px 56px;
   border-radius: 100px;
   border: none;
   background-color: #a132ad;
 
-  &--create-account {
+  &--create-account-page {
     padding: 15px 41px;
     margin: 45px auto 174px;
+
+    @media screen and (max-width: 568px) {
+      padding: 15px 28px;
+      margin: 39px auto 94px;
+    }
   }
 
-  &--edit-account {
+  &--edit-account-page {
     margin: 37px auto 113px;
     padding: 15px 48px;
-  }
-}
 
-.link {
-  font-family: 'Roboto', sans-serif;
-
-
-  &--create-account {
-    font-size: 18px;
-    font-weight: 300;
-    color: #a132ad;
-    margin: 26px auto 130px;
-    display: block;
-    text-decoration: none;
+    @media screen and (max-width: 568px) {
+      padding: 15px 37px;
+      margin: 39px auto 51px;
+    }
   }
 
-  &--redirect-to-request-invite {
-    font-size: 15px;
-    color: #23be68;
-    display: inline-block;
+  &--sign-in-page {
+    margin: 32px auto auto;
+    padding: 15px 57px;
+
+    @media screen and (max-width: 568px) {
+      margin: 30px auto auto;
+    }
+  }
+
+  &--change-password {
+    padding: 15px 38px;
+    margin: 36px auto 154px;
+
+    @media screen and (max-width: 568px) {
+      padding: 15px auto 32px;
+      margin: 30px auto 107px;
+    }
+  }
+
+  &--reset-password {
+    padding: 15px 50px;
+    margin: 34px auto 118px;
+
+    @media screen and (max-width: 568px) {
+      padding: 15px 62px;
+      margin: 31px auto 99px;
+    }
   }
 }
 
@@ -652,7 +776,13 @@
   background-image: url("../images/profile-picture-placeholder-copy.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 138px 138px;
   margin-bottom: 63px;
+
+  @media screen and (max-width: 568px) {
+    margin-bottom: 38px;
+    background-size: 104px 104px;
+  }
 
   &_icon {
     font-family: 'Roboto', sans-serif;
@@ -667,4 +797,39 @@
   text-align: center;
 }
 
+.confirmation-page {
+  max-width: 1024px;
 
+  &_icon {
+    display: block;
+    margin: 110px auto 20px;
+
+    @media screen and (max-width: 568px) {
+    width: 54px;
+      margin: 70px auto 17px;
+  }
+  }
+
+  &_header {
+    font-family: 'Roboto', sans-serif;
+    font-size: 45px;
+    color: #565656;
+    text-align: center;
+
+    @media screen and (max-width: 568px) {
+      font-size: 30px;
+    }
+  }
+
+  &_info {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #676767;
+    text-align: center;
+    margin: 10px auto 189px;
+
+    @media screen and (max-width: 568px) {
+      font-size: 13px;
+    }
+  }
+}

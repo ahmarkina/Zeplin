@@ -1,32 +1,43 @@
 //= templates/header.html
 
 <div class="login-page">
-    <h2 class="header header--create-account-page">Create an account</h2>
-    <span class="hint hint--create-account-page">We currenly require an invite. You can request one</span>
-    <a href="#" class="link link--redirect-to-request-invite">here</a>
-    <form method="POST" class="form form--create-account">
-        <div class="wrap-field wrap-field--enter-invite-code">
-            <label for="code" class="label label--invite-code">Enter your invite code here</label>
-            <input id="code" class="input input--code-create-account" type="text " name="code" placeholder="siamaliam-porem">
+
+    <form method="POST" class="form" id="create_account">
+        <h2 class="form_header form_header--align-center">Create an account</h2>
+        <div class="form_hint-box">
+            <span class="form_hint">We currenly require an invite.</span>
+            <span class="form_hint">You can request one</span>
+            <a href="#" class="form_link form_link--green">here</a>
         </div>
-        <div class="wrap-field wrap-field--first-name">
-            <label for="firstName" class="label label--first-name">Your first name</label>
-            <input type="text" id="firstName" class="input input--first-name-create-account" type="text" name="firstName" placeholder="Filip">
+        <div class="field-box">
+            <label for="code" class="field-box_label">Enter your invite code here</label>
+            <input id="code" class="field-box_edit-box" type="text " name="code">
         </div>
-        <div class="wrap-field wrap-field--last-name">
-            <label for="lastName" class="label label--last-name">Your last name</label>
-            <input type="text" id="lastName" class="input input--last-name-create-account" type="text" name="lastName" placeholder="Hammarnäs">
+
+        <div class="field-box">
+            <label for="firstName" class="field-box_label">Your first name</label>
+            <input type="text" id="firstName" class="field-box_edit-box" type="text" name="firstName">
         </div>
-        <div class="wrap-field wrap-field--email">
-            <label for="email" class="label label--email">Your last name</label>
-            <input type="text" id="email" class="input input--email-create-account" type="email" name="email" placeholder="filip@hammarnas.se">
+
+        <div class="field-box">
+            <label for="lastName" class="field-box_label">Your last name</label>
+            <input type="text" id="lastName" class="field-box_edit-box" type="text" name="lastName">
         </div>
-        <div class="wrap-field wrap-field--password-create-account-page">
-            <label for="create_account_password" class="label label--password-create-account-page">Enter your password of choice</label>
-            <input type="text" id="create_account_password" class="input input--password-create-account-page" type="password" name="create_account_password" placeholder="••••••••••••••">
+
+        <div class="field-box">
+            <label for="email" class="field-box_label">Your last name</label>
+            <input type="text" id="email" class="field-box_edit-box" type="email" name="email">
         </div>
-        <button id="login" class="btn btn--create-account" type="submit">Create account</button>
+
+        <div class="field-box">
+            <label for="create_account_password" class="field-box_label">Enter your password of choice</label>
+            <input type="text" id="create_account_password" class="field-box_edit-box field-box_edit-box--font-size-30" type="password" name="create_account_password">
+        </div>
+
+        <button id="login" class="btn btn--create-account-page" type="submit">Create account</button>
+
     </form>
+</div>
 </div>
 </div>
 </body>

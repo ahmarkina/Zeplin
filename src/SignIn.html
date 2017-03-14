@@ -1,20 +1,25 @@
 //= templates/header.html
 
 <div class="login-page">
-    <h2 class="header header--login-page">Sign into Kitab Sawti</h2>
-    <span class="hint hint--login-page">Enter your details below</span>
-    <span class="error error--authentication-login-page">Oops! That email / password combination is not valid</span>
-    <form method="POST" class="form form--crowd-login">
-        <div class="wrap-field wrap-field--username">
-            <label for="username" class="label label--username">Email</label>
-            <input id="username" class="input input--username-login-page" type="text " name="username" placeholder="filip@hammarnas.se">
+    <form method="POST" class="form" id="login_form">
+        <h2 class="form_header">Sign into Kitab Sawti</h2>
+        <div class="form_hint-box form_hint-box--small-margin">
+            <span class="form_hint">Enter your details below</span>
         </div>
-        <div class="wrap-field wrap-field--password">
-            <label for="password" class="label label--password">Password</label>
-            <input type="text" id="password" class="input input--password-login-page" type="password" name="password" placeholder="••••••••••••••">
+        <div class="form_error">Oops! That email / password combination is not valid</div>
+        <div class="field-box">
+            <label for="username" class="field-box_label">Email</label>
+            <input id="username" class="field-box_edit-box" type="text " name="username">
         </div>
-        <button id="login" class="btn btn--login-primary" type="submit">Sign in</button>
-        <a href="#" id="create" class="link link--create-account">Create an account</a>
+        <div class="field-box">
+            <div class="label-box clearfix">
+                <label for="password" class="field-box_label field-box_label--align-left">Password</label>
+                <a href="../build/ResetPassword.html" class="form_link form_link--greyish-brown-two">Forgot password?</a>
+            </div>
+            <input type="text" id="password" class="field-box_edit-box field-box_edit-box--font-size-30" type="password" name="password">
+        </div>
+        <button id="login" class="btn btn--sign-in-page" type="submit">Sign in</button>
+        <a href="../build/CreateAccount.html" id="create" class="form_link form_link--bluish-purple">Create an account</a>
     </form>
 </div>
 </div>
