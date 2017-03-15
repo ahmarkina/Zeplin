@@ -32,7 +32,7 @@
 }
 
 .header-top-wrap-logo {
-  width: 240px;
+  max-width: 240px;
   background-color: #250a37;
   padding: 20px 35px 19px;
   float: left;
@@ -42,11 +42,22 @@
     display: inline-block;
     vertical-align: middle;
   }
+
+  @media screen and (max-width: 568px) {
+    padding: 15px 21px;
+  }
+
+  &_logo-img {
+
+    @media screen and (max-width: 568px) {
+      max-width: 130px;
+    }
+  }
 }
 
 .header-top-menu {
   float: right;
-  width: 277px;
+  max-width: 277px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -67,7 +78,7 @@
   }
 
   &_change-language {
-    width: 109px;
+    max-width: 109px;
     background-color: #ffffff;
 
     &--style-2 {
@@ -88,6 +99,11 @@
     &--style-2 {
       color: #ffffff;
       padding: 34px 29px;
+
+      @media screen and (max-width: 568px) {
+        font-size: 17px;
+        padding: 24px 14.5px;
+      }
     }
 
     &:hover {
@@ -109,11 +125,25 @@
     margin: 18px 27px 12px;
     padding: 17.2px 0;
 
+    @media screen and (max-width: 568px) {
+      font-size: 13px;
+      padding: 11px 0;
+      min-width: 72px;
+      margin: 14px 18.5px;
+    }
+
     &--style-2 {
       margin: 18px 27px 19px;
       color: #ffffff;
       border: solid 1px #ffffff;
       display: block;
+
+      @media screen and (max-width: 568px) {
+        font-size: 13px;
+        padding: 11px 0;
+        min-width: 72px;
+        margin: 14px 18.5px;
+      }
     }
   }
 }
