@@ -24,10 +24,24 @@
   width: 100%;
   padding-bottom: 204px;
 
+  @media screen and (max-width: 768px) {
+    background: #250a37 none;
+    padding-bottom: 0;
+  }
+
   &--style-2 {
     max-width: 1024px;
     background: #250a37 none;
     padding-bottom: 0;
+  }
+}
+
+.wrap-header-bottom {
+
+  @media screen and (max-width: 768px) {
+    background: #A9A9A9 url("../images/hand-copy-2.png") no-repeat 0% 135px;
+    background-size: 97%;
+    padding: 48px 0 152px 0;
   }
 }
 
@@ -43,13 +57,13 @@
     vertical-align: middle;
   }
 
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 768px) {
     padding: 15px 21px;
   }
 
   &_logo-img {
 
-    @media screen and (max-width: 568px) {
+    @media screen and (max-width: 768px) {
       max-width: 130px;
     }
   }
@@ -75,11 +89,19 @@
 
   &_authentication-major-page {
     border: none;
+
+    @media screen and (max-width: 768px) {
+      border-right: solid 1px #ffffff;
+    }
   }
 
   &_change-language {
     max-width: 109px;
     background-color: #ffffff;
+
+    @media screen and (max-width: 768px) {
+      background-color: inherit;
+    }
 
     &--style-2 {
       background-color: inherit;
@@ -96,11 +118,17 @@
     display: block;
     text-decoration: none;
 
+    @media screen and (max-width: 768px) {
+      font-size: 17px;
+      padding: 24px 14.5px 24px 14.5px;
+      color: #ffffff;
+    }
+
     &--style-2 {
       color: #ffffff;
       padding: 34px 29px;
 
-      @media screen and (max-width: 568px) {
+      @media screen and (max-width: 768px) {
         font-size: 17px;
         padding: 24px 14.5px;
       }
@@ -125,11 +153,11 @@
     margin: 18px 27px 12px;
     padding: 17.2px 0;
 
-    @media screen and (max-width: 568px) {
+    @media screen and (max-width: 768px) {
       font-size: 13px;
       padding: 11px 0;
       min-width: 72px;
-      margin: 14px 18.5px;
+      margin: 14px 17.5px;
     }
 
     &--style-2 {
@@ -138,7 +166,7 @@
       border: solid 1px #ffffff;
       display: block;
 
-      @media screen and (max-width: 568px) {
+      @media screen and (max-width: 768px) {
         font-size: 13px;
         padding: 11px 0;
         min-width: 72px;
@@ -153,13 +181,16 @@
   font-family: 'Libre Franklin', sans-serif;
   font-size: 70px;
   font-weight: 900;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 0.97;
-  letter-spacing: normal;
   text-align: left;
   color: #982be1;
   margin: 138px auto auto 19.25%;
+
+  @media screen and (max-width: 768px) {
+    font-size: 35px;
+    max-width: 55%;
+    margin: auto auto auto 11.73%;
+  }
 }
 
 .header-main-content-description {
@@ -169,10 +200,21 @@
   line-height: 1.22;
   color: #982be1;
   margin: 12px auto auto 19.25%;
+
+  @media screen and (max-width: 768px) {
+    font-size: 13px;
+    max-width: 44%;
+    margin: 16px auto auto 11.73%;
+  }
 }
 
 .form-get-invited {
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+    //max-width: 85.6%;
+    margin: auto;
+  }
 
   &__with-bluish-purple-btn {
 
@@ -192,8 +234,11 @@
     border: none;
     margin: 90px -86.5px auto 29%;
 
-    &:focus {
-      //border: 1px solid #787878;
+    @media screen and (max-width: 768px) {
+      max-width: 240px;
+      padding: 15px 81px 15px 25px;
+      margin: 47px -66.5px auto ~"calc((100% - 306px) / 2)";
+      font-size: 14.3px;
     }
   }
 
@@ -208,6 +253,14 @@
     border-radius: 200px;
     background-color: #2d0f41;
     border: none;
+    margin-top: 90px;
+
+    @media screen and (max-width: 768px) {
+      max-width: 133px;
+      font-size: 15.4px;
+      padding: 15px 25px;
+      margin-top: 47px;
+    }
 
     &__with-bluish-purple-btn {
       background-color: #8b23d1;
@@ -223,12 +276,17 @@
 
 .block-features {
   width: 100%;
-  margin-top: -51px;
+  margin: -51px auto 84px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: auto;
+    padding-bottom: 60px;
+  }
 }
 
 .block-features-wrap {
-  //width: 65.4%;
-  margin: auto 11.67% auto 18.75%;
+  width: 65.4%;
+  margin: auto;
 }
 
 .block-features-point {
@@ -238,8 +296,15 @@
   text-align: left;
   margin: auto 23.5px;
 
+  @media screen and (max-width: 768px) {
+    display: block;
+    width: 230px;
+    margin: 39px auto auto;
+  }
+
   &_img {
-    margin: auto auto 24px 24px;
+    margin: auto auto 24px auto;
+    display: block;
   }
 
   &_header {
@@ -266,6 +331,11 @@
   background-repeat: no-repeat;
   padding: 73px 0 104px;
 
+  @media screen and (max-width: 568px) {
+    padding: 65px 0 79px;
+    background-position: 50% 795px;
+  }
+
   &_header-easy-to-use {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 70px;
@@ -273,6 +343,10 @@
     line-height: 0.8;
     color: #ffffff;
     text-align: center;
+
+    @media screen and (max-width: 568px) {
+      font-size: 40px;
+    }
   }
 
   &_header-try-for-free {
@@ -284,6 +358,10 @@
     color: #ffffff;
     text-shadow: 0 2px 21px rgba(0, 0, 0, 0.76);
     margin-bottom: 218px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 40px;
+    }
   }
 }
 
@@ -292,6 +370,9 @@
   width: 528px;
   margin: 70px auto 239px;
 
+  @media screen and (max-width: 568px) {
+    width: auto;
+  }
 }
 
 .block-how-to-use-point {
@@ -299,6 +380,12 @@
   display: inline-block;
   vertical-align: top;
   margin: auto 13px;
+
+  @media screen and (max-width: 568px) {
+    display: block;
+    width: 240px;
+    margin: 20px auto auto auto;
+  }
 
   &_img {
     display: block;
@@ -310,6 +397,10 @@
     font-size: 13px;
     line-height: 1.31;
     color: #ffffff;
+
+    @media screen and (max-width: 568px) {
+      text-align: center;
+    }
   }
 }
 
@@ -322,6 +413,10 @@
   margin: auto;
   padding: 68px 0 66px;
 
+  @media screen and (max-width: 568px) {
+    padding: 40px 0 60px;
+  }
+
   &_header {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 55px;
@@ -329,6 +424,11 @@
     line-height: 0.93;
     color: #717171;
     margin-bottom: 27px;
+
+    @media screen and (max-width: 568px) {
+      font-size: 35px;
+
+    }
   }
 
   &_info-about-company {
@@ -338,6 +438,10 @@
     line-height: 1.45;
     color: #565656;
     max-width: 452px;
+
+    @media screen and (max-width: 568px) {
+      font-size: 15px;
+    }
   }
 }
 
@@ -349,6 +453,10 @@
   text-align: left;
   color: #717171;
   margin: 46px auto 26px;
+
+  @media screen and (max-width: 568px) {
+    font-size: 15px;
+  }
 
   &_email {
 
@@ -371,9 +479,18 @@
 .block-footer {
   margin: 33px 117px 25px;
 
+  @media screen and (max-width: 568px) {
+    margin: auto;
+  }
+
   &_logo {
     margin-bottom: 10px;
     display: block;
+
+    @media screen and (max-width: 568px) {
+      margin: auto auto 6px auto;
+
+    }
   }
 
   &_copy-right {
@@ -384,6 +501,40 @@
     color: #979797;
     display: block;
     margin-bottom: 25px;
+
+    @media screen and (max-width: 568px) {
+      text-align: center;
+    }
+  }
+}
+
+.slider-tabs-menu {
+  width: 376px;
+  margin: auto;
+
+  @media screen and (max-width: 568px) {
+    width: 100%;
+  }
+}
+
+.slider-tab {
+  display: inline-block;
+  width: 49%;
+
+  &_link {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 22px;
+    line-height: 1.27;
+    color: #a2a2a2;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+
+    &:hover {
+      color: #565656;
+      border-bottom: solid 4px #982be1;
+    }
   }
 }
 
@@ -394,7 +545,8 @@
 }
 
 .slider-single-item {
-  width: 168.8px;
+  max-width: 168.8px;
+  min-width: 135px;
   height: 300.2px;
   border-radius: 3.2px;
   background-color: #ffffff;
@@ -433,6 +585,15 @@
 
 .slick-prev::before, .slick-next::before  {
   color: #000000;
+}
+
+.slick-prev {
+  left: 25px;
+  z-index: 1000;
+}
+
+.slick-next {
+  right: 25px;
 }
 
 .privacy-policy-block {

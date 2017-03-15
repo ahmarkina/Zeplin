@@ -8,6 +8,7 @@ $(document).ready(function(){
         centerPadding: '60px',
         slidesToShow: 7,
         arrows: true,
-        dots: false
+        dots: false,
+        infinity: true
     });
 });
