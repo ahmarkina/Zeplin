@@ -465,6 +465,13 @@
   &_privacy-policy {
     //font-family: GeezaPro;
     font-weight: normal;
+    text-decoration: none;
+    color: #717171;
+
+    &:hover {
+      color: #909090;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -473,23 +480,30 @@
   &_icon {
     margin-right: 15px;
     text-decoration: none;
+
+    &_img {
+
+
+      &:hover {
+
+      }
+    }
   }
 }
 
 .block-footer {
   margin: 33px 117px 25px;
 
-  @media screen and (max-width: 568px) {
-    margin: auto;
+  @media screen and (max-width: 768px) {
+    margin: 24px auto;
   }
 
   &_logo {
     margin-bottom: 10px;
     display: block;
 
-    @media screen and (max-width: 568px) {
+    @media screen and (max-width: 768px) {
       margin: auto auto 6px auto;
-
     }
   }
 
@@ -502,7 +516,7 @@
     display: block;
     margin-bottom: 25px;
 
-    @media screen and (max-width: 568px) {
+    @media screen and (max-width: 768px) {
       text-align: center;
     }
   }
@@ -539,14 +553,13 @@
 }
 
 .slider {
-  width: 100%;
   padding: 71px 0 83px;
   background-color: #f8f7f7;
 }
 
 .slider-single-item {
-  max-width: 168.8px;
-  min-width: 135px;
+  width: 168.8px;
+
   height: 300.2px;
   border-radius: 3.2px;
   background-color: #ffffff;
@@ -554,6 +567,11 @@
   display: inline-block;
   margin: auto 5.5px;
   position: relative;
+
+  @media screen and (max-width: 768px) {
+    width: 135px;
+    height: 250px;
+  }
 
 
   &:hover {
@@ -587,18 +605,52 @@
   color: #000000;
 }
 
+.slick-prev::before {
+  content: url(../images/page1.svg);
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  font-size: 0;
+}
+
+.slick-next::before {
+  content: url(../images/page2.svg);
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  font-size: 0;
+}
+
 .slick-prev {
   left: 25px;
-  z-index: 1000;
+  z-index: 10000;
+  width: 36px;
+  height: 62px;
+  top: 48%;
+}
+
+.slick-next {
+  right: -25px;
+  z-index: 10000;
+  width: 36px;
+  height: 62px;
+  top: 48%;
 }
 
 .slick-next {
   right: 25px;
 }
 
+.wrap-privacy-policy-block {
+  margin: 80px 10% auto 7%;
+
+  @media screen and (max-width: 768px) {
+    margin: 52px auto auto;
+    max-width: 73%;
+  }
+}
+
 .privacy-policy-block {
   background-color: #1fc67b;
-  padding: 68px 0 59px;
+  padding: 57px 0 59px;
 
   &_header {
     font-family: 'Libre Franklin', sans-serif;
@@ -607,29 +659,31 @@
     line-height: 1.13;
     color: #ffffff;
     text-align: center;
+
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
   }
 }
 
 .privacy-policy-menu-wrap {
   display: inline-block;
   vertical-align: top;
-  max-width: 28%;
+  max-width: 23%;
   padding: 0;
   margin: 0;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 .privacy-policy-menu {
-  margin: 82px auto auto 70px;
 
 }
 
 .privacy-policy-menu-point {
-  margin-bottom: 40px;
-  height: 36px;
-
-  &:hover {
-    background-color: #979797;
-  }
+  margin-bottom: 35px;
 
   &_link {
     text-decoration: none;
@@ -644,8 +698,15 @@
 .privacy-policy-content {
   display: inline-block;
   vertical-align: top;
-  max-width: 71%;
-  padding : 80px 0 0 55px;
+  float: right;
+  max-width: 74%;
+  padding-left: 53px;
+
+  @media screen and (max-width: 768px) {
+    float: none;
+    max-width: 100%;
+    padding-left: 0;
+  }
 
   &_title {
     font-family: 'Libre Franklin', sans-serif;
@@ -654,34 +715,66 @@
     line-height: 0.86;
     color: #565656;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 22px;
+      line-height: 1.2;
+    }
   }
 
   &_paragraph {
-    max-width: 86%;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 300;
     line-height: 1.44;
     color: #676767;
     margin-bottom: 60px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+
+    &--small-margin {
+      margin-bottom: 30px;
+    }
   }
 }
 
 .privacy-policy-content-list {
+ max-width: 80%;
+  margin: 30px 0 60px 0;
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+  }
+
 
   &_paragraph {
-    max-width: 68%;
+    list-style: disc outside;
+    width: 100%;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 300;
     line-height: 1.44;
     color: #676767;
     margin-bottom: 30px;
+    margin-left: 20px;
+    padding-left: 10px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      padding-left: 20px;
+    }
   }
 }
 
 .privacy-policy-contact-info {
-  margin-left: 119px;
+  padding: 60px 114px;
+  background-color: #fcfcfc;
+
+  @media screen and (max-width: 768px) {
+    padding: 45px 13.5%;
+  }
 
   &_contact-us {
 
@@ -690,6 +783,12 @@
     font-weight: 900;
     line-height: 0.93;
     color: #717171;
+    margin-bottom: 22px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
   }
 
   &_company-name {
@@ -699,6 +798,10 @@
     line-height: 1.45;
     color: #565656;
     display: block;
+
+    @media screen and (max-width: 768px) {
+      font-size: 15px;
+    }
   }
 
   &_address {
@@ -708,6 +811,11 @@
     line-height: 1.45;
     color: #565656;
     display: block;
+    margin-bottom: 11px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 15px;
+    }
   }
 
   &_email {
@@ -717,6 +825,19 @@
     line-height: 1.39;
     color: #717171;
     display: block;
+
+    @media screen and (max-width: 768px) {
+      font-size: 15px;
+    }
+  }
+}
+
+.block-icon {
+  margin-top: 84px;
+
+  @media screen and (max-width: 568px) {
+    width: 61px;
+    margin-top: 50px;
   }
 }
 
@@ -731,6 +852,10 @@
 
   @media screen and (max-width: 568px) {
     max-width: 265px;
+  }
+
+  &--with-margin-bottom {
+    margin-bottom: 113px;
   }
 
   &_header {
@@ -825,6 +950,19 @@
       color: #565656;
       text-decoration: none;
       display: inline-block;
+    }
+
+    &--greyish-brown-two-left {
+      font-size: 14px;
+      font-weight: 300;
+      color: #565656;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 

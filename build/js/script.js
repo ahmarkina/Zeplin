@@ -2,40 +2,65 @@ $(document).ready(function(){
 
     $('.slider').slick({
         centerMode: true,
-        centerPadding: '60px',
+        centerPadding: "60px",
         slidesToShow: 6,
         arrows: true,
         dots: false,
         infinite: true,
+        //autoplay: true,
+        //autoplaySpeed: 2000,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 3,
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
                     infinite: true,
+                    arrows: true,
                     dots: false,
-                    arrows: true
                 }
             },
             {
-                breakpoint: 720,
+                breakpoint: 860,
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 1,
-                    arrows: false,
+                    infinite: true,
+                    arrows: true,
+                    dots: false,
+                }
+            },
+            {
+                breakpoint: 690,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    arrows: true,
                     dots: false
                 }
             },
             {
-                 breakpoint: 560,
+                breakpoint: 530,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
-                    arrows: false,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    arrows: true,
                     dots: false
-    }
-    }
-    ]
+                }
+            },
+            {
+                breakpoint: 375,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    arrows: true,
+                    dots: false
+                }
+            }
+        ]
+
     });
 });

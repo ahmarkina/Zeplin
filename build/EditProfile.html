@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="src/css/style.less"/>
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no">
     <title>Title</title>
@@ -31,25 +30,26 @@
 </section>
 
 <div class="edit-account-page">
-    <form method="POST" class="form" id="edit_account">
+    <form method="POST" class="form form--with-margin-bottom" id="edit_account">
         <h2 class="form_header form_header--align-left">Edit your profile</h2>
         <div class="field-box">
             <label for="firstName" class="field-box_label">First name</label>
-            <input type="text" id="firstName" class="field-box_edit-box" type="text" name="firstName">
+            <input type="text" id="firstName" class="field-box_edit-box" type="text" name="firstName" disabled>
         </div>
         <div class="field-box">
             <label for="lastName" class="field-box_label">Surname</label>
-            <input type="text" id="lastName" class="field-box_edit-box" type="text" name="lastName">
+            <input type="text" id="lastName" class="field-box_edit-box" type="text" name="lastName" disabled>
         </div>
         <div class="field-box">
             <label for="email" class="field-box_label">Email</label>
-            <input type="text" id="email" class="field-box_edit-box" type="email" name="email">
+            <input type="text" id="email" class="field-box_edit-box" type="email" name="email" disabled>
         </div>
-        <div class="field-box">
+        <!--<div class="field-box">
             <label for="password" class="field-box_label">Password</label>
             <input type="text" id="password" class="field-box_edit-box field-box_edit-box--font-size-30" type="password" name="password">
         </div>
-        <button id="login" class="btn btn--edit-account-page" type="submit">Save</button>
+        <button id="login" class="btn btn--edit-account-page" type="submit">Save</button>-->
+        <a href="../build/ChangePassword.html" class="form_link form_link--greyish-brown-two-left">Change password?</a>
     </form>
 </div>
 </div>
