@@ -4,6 +4,19 @@
   box-sizing: border-box;
 }
 
+@greyish-brown-two: #565656;
+@light-gray: #717171;
+@bluish-purple: #982be1;
+@bluish-purple-hover: #6e1fa3;
+@green: #1ec67b;
+@eggplant: #250a37;
+@white: #ffffff;
+
+@font-header: 'Libre Franklin', sans-serif;
+@font-text: 'Roboto', sans-serif;
+@font-text2: 'Cairo', sans-serif;
+
+
 .clearfix:after {
   content: "";
   display: block;
@@ -25,13 +38,13 @@
   padding-bottom: 204px;
 
   @media screen and (max-width: 680px) {
-    background: #250a37 none;
+    background: @eggplant none;
     padding-bottom: 0;
   }
 
   &--style-2 {
     max-width: 1024px;
-    background: #250a37 none;
+    background: @eggplant none;
     padding-bottom: 0;
   }
 }
@@ -47,7 +60,7 @@
 
 .header-top-wrap-logo {
   max-width: 240px;
-  background-color: #250a37;
+  background-color: @eggplant;
   padding: 20px 35px 19px;
   float: left;
 
@@ -83,21 +96,21 @@
 
   &_authentication {
     max-width: 164px;
-    opacity: 0.41;
-    border-right: solid 1px #ffffff;
+    //opacity: 0.41;
+    border-right: solid 1px @white;
   }
 
   &_authentication-major-page {
     border: none;
 
     @media screen and (max-width: 680px) {
-      border-right: solid 1px #ffffff;
+      border-right: solid 1px @white;
     }
   }
 
   &_change-language {
     max-width: 109px;
-    background-color: #ffffff;
+    background-color: @white;
 
     @media screen and (max-width: 680px) {
       background-color: inherit;
@@ -121,11 +134,11 @@
     @media screen and (max-width: 680px) {
       font-size: 17px;
       padding: 24px 14.5px 24px 14.5px;
-      color: #ffffff;
+      color: @white;
     }
 
     &--style-2 {
-      color: #ffffff;
+      color: @white;
       padding: 34px 29px;
 
       @media screen and (max-width: 680px) {
@@ -135,42 +148,64 @@
     }
 
     &:hover {
-      background-color: #250a37;
-      color: #ffffff;
+      background-color: @eggplant;
+      color: @white;
     }
   }
 
   &_log-in {
     min-width: 110px;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 17px;
     line-height: 1;
-    color: #982be1;
+    color: @bluish-purple;
     border-radius: 109.4px;
-    border: solid 1px #982be1;
+    border: solid 1px @bluish-purple;
     display: block;
     margin: 18px 27px 12px;
     padding: 17.2px 0;
 
-    @media screen and (max-width: 680px) {
-      font-size: 13px;
-      padding: 11px 0;
-      min-width: 72px;
-      margin: 14px 17.5px;
+    &:hover {
+      color: @eggplant;
+      border-color: @eggplant;
     }
 
     &--style-2 {
       margin: 18px 27px 19px;
-      color: #ffffff;
-      border: solid 1px #ffffff;
+      color: @white;
+      border: solid 1px @white;
       display: block;
+
+      &:hover {
+        background-color: @bluish-purple-hover;
+        color: @white;
+      }
 
       @media screen and (max-width: 680px) {
         font-size: 13px;
         padding: 11px 0;
         min-width: 72px;
         margin: 14px 18.5px;
+
+        &:hover {
+          background-color: @bluish-purple-hover;
+          color: @white;
+        }
+      }
+    }
+
+    @media screen and (max-width: 680px) {
+      font-size: 13px;
+      padding: 11px 0;
+      min-width: 72px;
+      margin: 14px 17.5px;
+      color: @white;
+      border-color: @white;
+
+      &:hover {
+        color: @white;
+        background-color: @bluish-purple-hover;
       }
     }
   }
@@ -178,12 +213,12 @@
 
 .header-main-content {
   max-width: 73%;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: @font-header;
   font-size: 70px;
   font-weight: 900;
   line-height: 0.97;
   text-align: left;
-  color: #982be1;
+  color: @bluish-purple;
   margin: 138px auto auto 19.25%;
 
   @media screen and (max-width: 780px) {
@@ -219,10 +254,10 @@
 
 .header-main-content-description {
   max-width: 25.4%;
-  font-family: 'Roboto', sans-serif;
+  font-family: @font-text;
   font-size: 18px;
   line-height: 1.22;
-  color: #982be1;
+  color: @bluish-purple;
   margin: 12px auto auto 19.25%;
 
   @media screen and (max-width: 780px) {
@@ -250,17 +285,18 @@
 
   &_enter-your-email {
     max-width: 350.9px;
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 18px;
     font-weight: 300;
-    line-height: 1.33;
     color: #787878;
-    padding: 20px 128.9px 19px 28px;
+    padding: 20px 128.9px 20px 28px;
     border-radius: 93px;
-    background-color: #ffffff;
+    background-color: @white;
     outline: none;
     border: none;
     margin: 90px -86.5px auto ~"calc((100% - 457.5px) / 2)";
+    display: inline-block;
+    vertical-align: middle;
 
     @media screen and (max-width: 768px) {
       max-width: 240px;
@@ -272,16 +308,17 @@
 
   &_btn-get-invited {
     max-width: 173px;
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: @font-header;
     font-size: 20px;
     font-weight: 900;
-    line-height: 1.2;
-    color: #ffffff;
+    color: @white;
     padding: 19px 32px;
     border-radius: 200px;
     background-color: #2d0f41;
     border: none;
     margin-top: 90px;
+    display: inline-block;
+    vertical-align: middle;
 
     @media screen and (max-width: 768px) {
       max-width: 133px;
@@ -296,7 +333,7 @@
 
     &:hover {
       border-radius: 200px;
-      background-color: #6e1fa3;
+      background-color: @bluish-purple-hover;
     }
 
   }
@@ -335,59 +372,59 @@
   }
 
   &_header {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: @font-header;
     font-size: 24px;
     font-weight: bold;
     line-height: 1.13;
-    color: #565656;
+    color: @greyish-brown-two;
   }
 
   &_description {
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 16px;
     line-height: 1.1;
-    color: #565656;
+    color: @greyish-brown-two;
     margin-top: 12px;
   }
 }
 
 .block-try-for-free {
-  background-color: #2d0f41;
-  background-image: url("../images/phone-with-logo-copy-2.svg");
-  background-position: 50% 467.3px;
-  background-repeat: no-repeat;
+  background: #2d0f41 url("../images/phone-with-logo-copy-2.svg") 50% 467.3px no-repeat;
   padding: 73px 0 104px;
 
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 768px) {
     padding: 65px 0 79px;
-    background-position: 50% 795px;
+    background-position: 50% 745px;
+    background-size: 127px;
   }
 
   &_header-easy-to-use {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: @font-header;
     font-size: 70px;
     font-weight: 900;
     line-height: 0.8;
-    color: #ffffff;
+    color: @white;
     text-align: center;
 
-    @media screen and (max-width: 568px) {
+    @media screen and (max-width: 768px) {
       font-size: 40px;
     }
   }
 
   &_header-try-for-free {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: @font-header;
     font-size: 90px;
     font-weight: 900;
     line-height: 0.62;
     text-align: center;
-    color: #ffffff;
+    color: @white;
     text-shadow: 0 2px 21px rgba(0, 0, 0, 0.76);
-    margin-bottom: 218px;
+    margin-bottom: 150px;
+
 
     @media screen and (max-width: 768px) {
       font-size: 40px;
+      margin-bottom: 88px;
     }
   }
 }
@@ -397,8 +434,9 @@
   width: 528px;
   margin: 70px auto 239px;
 
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 768px) {
     width: auto;
+    margin: 26px auto 165px;
   }
 }
 
@@ -408,7 +446,7 @@
   vertical-align: top;
   margin: auto 13px;
 
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 768px) {
     display: block;
     width: 240px;
     margin: 20px auto auto auto;
@@ -420,10 +458,10 @@
   }
 
   &_img-caption {
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 13px;
     line-height: 1.31;
-    color: #ffffff;
+    color: @white;
 
     @media screen and (max-width: 568px) {
       text-align: center;
@@ -445,11 +483,11 @@
   }
 
   &_header {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: @font-header;
     font-size: 55px;
     font-weight: 900;
     line-height: 0.93;
-    color: #717171;
+    color: @light-gray;
     margin-bottom: 27px;
 
     @media screen and (max-width: 568px) {
@@ -459,11 +497,11 @@
   }
 
   &_info-about-company {
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.45;
-    color: #565656;
+    color: @greyish-brown-two;
     max-width: 452px;
 
     @media screen and (max-width: 568px) {
@@ -473,12 +511,12 @@
 }
 
 .block-hello-kitab-sawti-com {
-  font-family: 'Roboto', sans-serif;
+  font-family: @font-text;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.5;
   text-align: left;
-  color: #717171;
+  color: @light-gray;
   margin: 46px auto 26px;
 
   @media screen and (max-width: 568px) {
@@ -493,7 +531,7 @@
     //font-family: GeezaPro;
     font-weight: normal;
     text-decoration: none;
-    color: #717171;
+    color: @light-gray;
 
     &:hover {
       color: #909090;
@@ -507,12 +545,12 @@
   &_icon {
     margin-right: 15px;
     text-decoration: none;
+    display: inline-block;
 
-    &_img {
+    &:hover {
 
-
-      &:hover {
-
+      .social-icon {
+        fill: #909090;
       }
     }
   }
@@ -535,7 +573,7 @@
   }
 
   &_copy-right {
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 11px;
     line-height: 1.36;
     text-align: left;
@@ -554,7 +592,7 @@
   margin: auto;
 
   @media screen and (max-width: 568px) {
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -563,7 +601,7 @@
   width: 49%;
 
   &_link {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: @font-header;
     font-size: 22px;
     line-height: 1.27;
     color: #a2a2a2;
@@ -571,10 +609,11 @@
     display: block;
     text-align: center;
     padding: 10px 0;
+    border-bottom: solid 4px @white;
 
     &:hover {
-      color: #565656;
-      border-bottom: solid 4px #982be1;
+      color: @greyish-brown-two;
+      border-bottom: solid 4px @bluish-purple;
     }
   }
 }
@@ -587,46 +626,52 @@
 .slider-single-item {
   max-width: 170.8px;
   border-radius: 3.2px;
-  background-color: #ffffff;
+  background-color: @white;
   border: solid 0.8px #e5e5e5;
   display: inline-block;
   margin: auto 5.5px;
-  position: relative;
+  padding: 42px 0 102px;
 
   @media screen and (max-width: 768px) {
     width: 135px;
+    padding: 34px 0 82px;
   }
 
   &:hover {
     background-color: #ece6ed;
     border: solid 0.8px #cdcdcd;
-
-    &_play-icon {
-
-    }
-
   }
 
   &_play-icon {
+    width: 50%;
     position: absolute;
-    top: 95px;
-    left: 29%;
+    top: 53px;
+    left: 25%;
 
     @media screen and (max-width: 768px) {
-      width: 44px;
+      top: 30px;
+    }
+
+    &:hover {
+
+      .ellipse {
+          fill: #781f81;
+      }
     }
   }
 
   &_book-img {
-    margin: 42px auto 102px;
+    margin: auto;
     max-width: 107px;
     min-width: 107px;
     height: 156px;
+    position: relative;
 
     @media screen and (max-width: 768px) {
-      width: 86.5px;
+      max-width: 86px;
+      min-width: 86px;
       height: 125px;
-      margin: 34px auto 82px;
+      margin: auto;
     }
   }
 
@@ -635,7 +680,7 @@
     min-width: 107px;
     height: 156px;
     position: absolute;
-    top: 42px;
+    //top: 42px;
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
 
     @media screen and (max-width: 768px) {
@@ -646,11 +691,11 @@
   }
 
   &_first-img-recurs {
-    width: ~"calc(100% - 68px)";
+    width: 94%;
     height: 149px;
     position: absolute;
-    left: ~"calc((100% - 100px) / 2)";
-    top: 38px;
+    left: 3%;
+    top: -5px;
     border: 1px solid #cdcdcd;
 
     @media screen and (max-width: 768px) {
@@ -659,11 +704,11 @@
   }
 
   &_second-img-recurs {
-    width: ~"calc(100% - 82px)";
+    width: 76%;
     height: 121px;
     position: absolute;
-    left: 24%;
-    top: 34px;
+    left: 12%;
+    top: -8px;
     border: 1px solid #cdcdcd;
 
     @media screen and (max-width: 768px) {
@@ -673,28 +718,19 @@
 
 }
 
-.ellipse {
-
-  &:hover {
-    fill: #781f81;
-  }
-}
-
 .slick-prev::before, .slick-next::before  {
   color: #000000;
 }
 
 .slick-prev::before {
   content: url(../images/page1.svg);
-  background-repeat: no-repeat;
-  background-color: #ffffff;
+  background: @white no-repeat;
   font-size: 0;
 }
 
 .slick-next::before {
   content: url(../images/page2.svg);
-  background-repeat: no-repeat;
-  background-color: #ffffff;
+  background: @white no-repeat;
   font-size: 0;
 }
 
@@ -732,11 +768,11 @@
   padding: 57px 0 59px;
 
   &_header {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: @font-header;
     font-size: 60px;
     font-weight: 900;
     line-height: 1.13;
-    color: #ffffff;
+    color: @white;
     text-align: center;
 
     @media screen and (max-width: 768px) {
@@ -766,11 +802,11 @@
 
   &_link {
     text-decoration: none;
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: @font-header;
     font-size: 14px;
     font-weight: 600;
     line-height: 1;
-    color: #717171;
+    color: @light-gray;
 
     &:hover {
       color: #c2c1c1;
@@ -792,11 +828,11 @@
   }
 
   &_title {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: @font-header;
     font-size: 28px;
     font-weight: 500;
     line-height: 0.86;
-    color: #565656;
+    color: @greyish-brown-two;
     margin-bottom: 10px;
 
     @media screen and (max-width: 768px) {
@@ -806,7 +842,7 @@
   }
 
   &_paragraph {
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 18px;
     font-weight: 300;
     line-height: 1.44;
@@ -835,7 +871,7 @@
   &_paragraph {
     list-style: disc outside;
     width: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 18px;
     font-weight: 300;
     line-height: 1.44;
@@ -861,11 +897,11 @@
 
   &_contact-us {
 
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: @font-header;
     font-size: 55px;
     font-weight: 900;
     line-height: 0.93;
-    color: #717171;
+    color: @light-gray;
     margin-bottom: 22px;
 
     @media screen and (max-width: 768px) {
@@ -875,11 +911,11 @@
   }
 
   &_company-name {
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.45;
-    color: #565656;
+    color: @greyish-brown-two;
     display: block;
 
     @media screen and (max-width: 768px) {
@@ -888,11 +924,11 @@
   }
 
   &_address {
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.45;
-    color: #565656;
+    color: @greyish-brown-two;
     display: block;
     margin-bottom: 11px;
 
@@ -902,11 +938,11 @@
   }
 
   &_email {
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 18px;
     font-weight: bold;
     line-height: 1.39;
-    color: #717171;
+    color: @light-gray;
     display: block;
 
     @media screen and (max-width: 768px) {
@@ -943,9 +979,9 @@
 
   &_header {
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 30px;
-    color: #565656;
+    color: @greyish-brown-two;
     margin-top: 22px;
 
     @media screen and (max-width: 568px) {
@@ -980,7 +1016,7 @@
   }
 
   &_hint {
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 15px;
     line-height: 1;
     color: #676767;
@@ -992,7 +1028,7 @@
   }
 
   &_link {
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
 
     @media screen and (max-width: 568px) {
       font-size: 13px;
@@ -1012,7 +1048,7 @@
       }
 
       &:hover {
-        color: #6e1fa3;
+        color: @bluish-purple-hover;
       }
     }
 
@@ -1034,7 +1070,7 @@
       float: right;
       font-size: 14px;
       font-weight: 300;
-      color: #565656;
+      color: @greyish-brown-two;
       text-decoration: none;
       display: inline-block;
 
@@ -1046,7 +1082,7 @@
     &--greyish-brown-two-left {
       font-size: 14px;
       font-weight: 300;
-      color: #565656;
+      color: @greyish-brown-two;
       text-decoration: none;
       display: inline-block;
       margin: 10px 0;
@@ -1059,7 +1095,7 @@
   }
 
   &_error {
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 19px;
     font-weight: 300;
     line-height: 1;
@@ -1077,9 +1113,9 @@
 }
 
 .field-box {
-  font-family: 'Roboto', sans-serif;
+  font-family: @font-text;
   font-size: 15px;
-  color: #565656;
+  color: @greyish-brown-two;
   margin-top: 33px;
 
   @media screen and (max-width: 568px) {
@@ -1102,7 +1138,7 @@
 
   &_edit-box {
     width: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 18px;
     font-weight: 300;
     line-height: 1;
@@ -1131,9 +1167,9 @@
 }
 
 .btn {
-  font-family: 'Roboto', sans-serif;
+  font-family: @font-text;
   font-size: 18px;
-  color: #ffffff;
+  color: @white;
   display: block;
   border-radius: 100px;
   border: none;
@@ -1195,13 +1231,10 @@
 
 .update-profile {
   max-width: 1024px;
-  background-color: #eeeeee;
   padding: 107px 0 94px;
   text-align: center;
-  background-image: url("../images/profile-picture-placeholder-copy.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: 138px 138px;
+  background: #eeeeee url("../images/profile-picture-placeholder-copy.svg") center no-repeat;
   margin-bottom: 63px;
 
   @media screen and (max-width: 568px) {
@@ -1210,9 +1243,9 @@
   }
 
   &_icon {
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 15px;
-    color: #ffffff;
+    color: @white;
   }
 }
 
@@ -1236,9 +1269,9 @@
   }
 
   &_header {
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 45px;
-    color: #565656;
+    color: @greyish-brown-two;
     text-align: center;
 
     @media screen and (max-width: 568px) {
@@ -1247,7 +1280,7 @@
   }
 
   &_info {
-    font-family: 'Roboto', sans-serif;
+    font-family: @font-text;
     font-size: 15px;
     color: #676767;
     text-align: center;
